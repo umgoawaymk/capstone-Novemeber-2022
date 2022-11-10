@@ -1,23 +1,20 @@
 .page-container {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   width: 100vw;
   height: 100vh;
 }
 
 .page-container .left-name-list {
-  background-color: rgb(12, 12, 160);
+  background-color: #191970;
   color: aliceblue;
   width: 20vw;
   height: inherit;
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  overflow: scroll;
 }
 
-.page-container .left-name-list .header {
-  height: fit-content;
-}
 body {
   margin: unset;
 }
@@ -25,6 +22,8 @@ body {
 .page-container .left-name-list .header h3 {
   display: flex;
   justify-content: center;
+  font-weight: 200;
+  font-size: small;
 }
 
 .page-container .left-name-list .names-li {
@@ -48,18 +47,41 @@ body {
   height: 1em;
   width: 1em;
   display: flex;
+  justify-content: space-between;
+}
+
+.page-container .left-name-list .names-li .weight-wrapper #plusbtn {
+  background-color: red;
+  color: aliceblue;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+.page-container .left-name-list .names-li .weight-wrapper #minusbtn {
+  background-color: rgb(40, 197, 40);
+  color: aliceblue;
+  border: none;
   justify-content: center;
   align-items: center;
 }
 
 .page-container .right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 80vw;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .page-container .right-container .wrds-btn {
-  grid-row: 2;
-  grid-template-rows: 1fr 1fr;
   justify-self: center;
+}
+
+.page-container .right-container .wrds-btn button {
+  grid-row: 3;
+  height: 40px;
+  width: 40vw;
+  background-color: #191970;
+  color: aliceblue;
+  border: none;
 }
