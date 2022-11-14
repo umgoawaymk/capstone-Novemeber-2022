@@ -1,4 +1,4 @@
-(async () => {
+const firstNames = (async () => {
   const rawResponse = await fetch(
     "https://devpipeline-mock-api.herokuapp.com/api/auth/login",
     {
@@ -8,12 +8,16 @@
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: "madelyn@devpipeline.com",
-        password: "jazz1187",
+        email: "matthewcaldwell2033@gmail.com",
+        password: "registered",
       }),
     }
   );
   const content = await rawResponse.json();
   let users = content.users;
-  console.log(users);
+  const obj = users.forEach((user) => {
+    console.log(Object.values(user)[1]);
+  });
 })();
+
+firstNames.catch((err) => console.error("something went wrong", err));

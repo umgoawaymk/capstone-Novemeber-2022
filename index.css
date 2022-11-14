@@ -76,6 +76,17 @@ body {
 .page-container .right-container .wrds-btn {
   justify-self: center;
 }
+.page-container .right-container .wrds-btn h1 {
+  animation: normal;
+  @keyframes example {
+    from {
+      background-color: red;
+    }
+    to {
+      background-color: yellow;
+    }
+  }
+}
 
 .page-container .right-container .wrds-btn button {
   grid-row: 3;
@@ -84,4 +95,8 @@ body {
   background-color: #191970;
   color: aliceblue;
   border: none;
+}
+
+.page-container .right-container .wrds-btn button:hover {
+  cursor: grabbing;
 }
