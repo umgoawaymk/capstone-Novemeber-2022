@@ -1,4 +1,4 @@
-const firstNames = (async () => {
+let firstNames = (async () => {
   const rawResponse = await fetch(
     "https://devpipeline-mock-api.herokuapp.com/api/auth/login",
     {
@@ -21,3 +21,7 @@ const firstNames = (async () => {
 })();
 
 firstNames.catch((err) => console.error("something went wrong", err));
+
+const nameList = document.getElementById("names-li");
+
+nameList.appendChild(firstNames);
