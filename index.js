@@ -8,8 +8,8 @@ let firstNames = (async () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        email: "matthewcaldwell2033@gmail.com",
-        password: "registered",
+        email: "madelyn@devpipeline.com",
+        password: "jazz1187",
       }),
     }
   );
@@ -20,8 +20,4 @@ let firstNames = (async () => {
   });
 })();
 
-firstNames.catch((err) => console.error("something went wrong", err));
-
-const nameList = document.getElementById("names-li");
-
-nameList.appendChild(firstNames);
+const domLeft = firstNames.body.createElement();
